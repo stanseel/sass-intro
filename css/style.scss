@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Teko:500,600,700');
+
+$color1: #df4f4f;
+$color2: #b62d30;
+$color3: rgb(38,20,42);
+
+$alpha1: 0.5;
+$alpha2: 1;
+
+$bg-gradient: linear-gradient(-45deg, $color2, $color1);
+
+$fontset1: 'Teko', sans-serif;
+$fontset2: 'Roboto', sans-serif;
+
+$breekpunt: 560px;
+
+*{
+    padding:0; 
+    margin: 0;
+    font-family: $fontset2;
+    box-sizing:border-box;
+}
+
+body{
+    color:white;
+    background-color: $color3;
+}
+
+.wrapper{
+
+    @media (min-width: $breekpunt) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .splitscreen{
+        width:100%;
+        height:auto;
+
+        @media (min-width: $breekpunt) {
+            width: 50%;
+            height: 100vh;
+        }
+
+        &.txt{
+            background-image: $bg-gradient;
+            padding:20px;
+
+            h1, h2, h3{
+                font-family: $fontset1;
+                max-width: 500px;
+            }
+            h1{
+                line-height: 1em;
+                font-size: 4rem;
+                font-weight: 700;
+            }
+            h2{
+                margin-top:20px;
+                font-size: 2rem;
+            }
+            p{
+                font-family: $fontset2;
+                margin-top:30px;
+                margin-bottom:60px;
+                font-size: 1.2rem;
+                line-height: 1.7em;
+            }
+
+            @media (min-width: $breekpunt) {
+                padding:8%;
+            }
+        }
+        &.ill{
+            overflow:hidden;
+
+            img{
+                display:block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 20% center;
+
+                &:hover{
+                   
+                }
+            }
+        }
+
+    } 
+    .bttn{
+        text-decoration:none;
+        color: white;
+
+        display: block;
+        line-height: 64px;
+        text-align:center;
+        text-transform: uppercase;
+        font-weight:800;
+        width: 100%;
+        background-color: rgba($color3,$alpha1);
+        margin-top: 2em;
+        border-radius: 8px;
+        transition: all 1s;
+
+    }
+    .bttn:hover{
+        background-color: rgba($color3,$alpha2);
+        cursor:pointer;
+    }
+}
