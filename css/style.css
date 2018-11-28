@@ -78,13 +78,19 @@ body {
 
 .wrapper .splitscreen.ill img {
   display: block;
-  width: 50vw;
-  height: 100vh;
-  position: fixed;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 20% center;
-     object-position: 20% center;
+  width: 100%;
+}
+
+@media (min-width: 560px) {
+  .wrapper .splitscreen.ill img {
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 20% center;
+       object-position: 20% center;
+  }
 }
 
 .wrapper .bttn {
