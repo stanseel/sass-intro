@@ -31,15 +31,15 @@ body{
     @media (min-width: $breekpunt) {
         display: flex;
         flex-direction: row;
+        min-height: 100vh;
     }
 
     .splitscreen{
         width:100%;
-        height:auto;
 
         @media (min-width: $breekpunt) {
             width: 50%;
-            height: 100vh;
+            /*height: 100%;*/
         }
 
         &.txt{
@@ -73,13 +73,21 @@ body{
         }
         &.ill{
             overflow:hidden;
+            height: 100%;
 
             img{
                 display:block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: 20% center;
+                width:100%;
+               
+                
+                @media (min-width: $breekpunt) {
+                    width: 50vw;
+                    height: 100vh;
+                    position:fixed;
+                    object-fit: cover;
+                    object-position: 20% center;
+                    
+                }
 
                 &:hover{
                    
