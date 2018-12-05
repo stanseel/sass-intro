@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <!-- Required meta tags -->
@@ -9,10 +9,25 @@
     <!-- Custom CSS x -->
     <link href="css/style.css" rel="stylesheet">
 
-    <title>SCSS</title>
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <title>SCSS intro</title>
 </head>
 <body>
+    <div class="formwrapper verborgen">
+        <svg class="closebutton" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/></svg>
+        <form action="#">
+            <fieldset>
+                <label for="e-mail">E-mail</label>
+                <input type="text" id="e-mail" name="e-mail" placeholder="micky.mouse@disneyland.com">
+                <input type="submit" value="Verstuur">
+            </fieldset>
+        </form> 
+    </div>
     <div class="wrapper">
+        <a class="nieuwsbrief">Inschrijven in de nieuwsbrief</a>
         <div class="splitscreen txt">
             <h1>SCSS staat voor Sassy CSS</h1>
             <h2>Ofwel CSS op steroïden</h2>

@@ -15,7 +15,7 @@ $fontset2: 'Roboto', sans-serif;
 $breekpunt: 560px;
 
 *{
-    padding:0; 
+    padding: 0; 
     margin: 0;
     font-family: $fontset2;
     box-sizing:border-box;
@@ -26,7 +26,105 @@ body{
     background-color: $color3;
 }
 
+.formwrapper{
+
+    position: relative;
+
+    background-color: $color3;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    transition: all 1s;
+
+    @media (min-width: $breekpunt) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebutton{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        fill: white;
+    }
+
+    fieldset{
+        border:0;
+        padding: 20px;
+        @media (min-width: $breekpunt) {
+            
+        }
+    }
+    label{
+        display:block;
+        margin-bottom:10px;
+        @media (min-width: $breekpunt) {
+            display:inline-block;
+            margin-right:10px;
+        }
+    }
+    input{
+        font-size:1rem; 
+        padding:0px 12px;
+        height:64px;
+        border:0;
+    }
+    input[type=text]{
+        border-radius:3px;
+        width:250px;
+        margin-right: 5px;
+        @media (min-width: $breekpunt) {
+            width:340px;
+        }
+    }
+    input[type=submit] {
+        background-color: $color1;
+        border-radius: 8px;
+        color:#fff;
+        font-size: 1rem;
+        margin-right: 0px;
+        width: 85px;
+        @media (min-width: $breekpunt) {
+
+        }
+    }
+    input::placeholder{
+        color:lightgrey;
+    }
+    &.verborgen{
+        top:-150px;
+        min-height:0;
+        height:0;
+    }
+    &.getoond{
+        display:flex;
+    }
+
+
+}
 .wrapper{
+
+    position:relative;
+
+    .nieuwsbrief{
+        position: static;
+        line-height: 64px;
+        padding:0 20px;
+        border-radius: 0px;
+
+        @media (min-width: $breekpunt) {
+            position: absolute;
+            display:block;
+            z-index:2;
+            right:20px;
+            top:20px;
+            width: auto;
+            background-color: $color1;
+            border-radius: 8px;
+        }
+    }
 
     @media (min-width: $breekpunt) {
         display: flex;
@@ -65,6 +163,27 @@ body{
                 margin-bottom:60px;
                 font-size: 1.2rem;
                 line-height: 1.7em;
+            } 
+
+            .bttn{
+                text-decoration:none;
+                color: white;
+        
+                display: block;
+                line-height: 64px;
+                text-align:center;
+                text-transform: uppercase;
+                font-weight:800;
+                width: 100%;
+                background-color: rgba($color3,$alpha1);
+                margin-top: 2em;
+                border-radius: 8px;
+                transition: all 1s;
+        
+            }
+            .bttn:hover{
+                background-color: rgba($color3,$alpha2);
+                cursor:pointer;
             }
 
             @media (min-width: $breekpunt) {
@@ -83,7 +202,7 @@ body{
                 @media (min-width: $breekpunt) {
                     width: 50vw;
                     height: 100vh;
-                    position:fixed;
+                    position:static;
                     object-fit: cover;
                     object-position: 20% center;
                     
@@ -96,24 +215,4 @@ body{
         }
 
     } 
-    .bttn{
-        text-decoration:none;
-        color: white;
-
-        display: block;
-        line-height: 64px;
-        text-align:center;
-        text-transform: uppercase;
-        font-weight:800;
-        width: 100%;
-        background-color: rgba($color3,$alpha1);
-        margin-top: 2em;
-        border-radius: 8px;
-        transition: all 1s;
-
-    }
-    .bttn:hover{
-        background-color: rgba($color3,$alpha2);
-        cursor:pointer;
-    }
 }

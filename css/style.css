@@ -12,6 +12,139 @@ body {
   background-color: #26142a;
 }
 
+.formwrapper {
+  position: relative;
+  background-color: #26142a;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (min-width: 560px) {
+  .formwrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.formwrapper .closebutton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  fill: white;
+}
+
+.formwrapper fieldset {
+  border: 0;
+  padding: 20px;
+}
+
+.formwrapper label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 560px) {
+  .formwrapper label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.formwrapper input {
+  font-size: 1rem;
+  padding: 0px 12px;
+  height: 64px;
+  border: 0;
+}
+
+.formwrapper input[type=text] {
+  border-radius: 3px;
+  width: 250px;
+  margin-right: 5px;
+}
+
+@media (min-width: 560px) {
+  .formwrapper input[type=text] {
+    width: 340px;
+  }
+}
+
+.formwrapper input[type=submit] {
+  background-color: #df4f4f;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 0px;
+  width: 85px;
+}
+
+.formwrapper input::-webkit-input-placeholder {
+  color: lightgrey;
+}
+
+.formwrapper input:-ms-input-placeholder {
+  color: lightgrey;
+}
+
+.formwrapper input::-ms-input-placeholder {
+  color: lightgrey;
+}
+
+.formwrapper input::placeholder {
+  color: lightgrey;
+}
+
+.formwrapper.verborgen {
+  top: -150px;
+  min-height: 0;
+  height: 0;
+}
+
+.formwrapper.getoond {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .nieuwsbrief {
+  position: static;
+  line-height: 64px;
+  padding: 0 20px;
+  border-radius: 0px;
+}
+
+@media (min-width: 560px) {
+  .wrapper .nieuwsbrief {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    width: auto;
+    background-color: #df4f4f;
+    border-radius: 8px;
+  }
+}
+
 @media (min-width: 560px) {
   .wrapper {
     display: -webkit-box;
@@ -65,6 +198,27 @@ body {
   line-height: 1.7em;
 }
 
+.wrapper .splitscreen.txt .bttn {
+  text-decoration: none;
+  color: white;
+  display: block;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 100%;
+  background-color: rgba(38, 20, 42, 0.5);
+  margin-top: 2em;
+  border-radius: 8px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.wrapper .splitscreen.txt .bttn:hover {
+  background-color: #26142a;
+  cursor: pointer;
+}
+
 @media (min-width: 560px) {
   .wrapper .splitscreen.txt {
     padding: 8%;
@@ -85,32 +239,11 @@ body {
   .wrapper .splitscreen.ill img {
     width: 50vw;
     height: 100vh;
-    position: fixed;
+    position: static;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 20% center;
        object-position: 20% center;
   }
-}
-
-.wrapper .bttn {
-  text-decoration: none;
-  color: white;
-  display: block;
-  line-height: 64px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 800;
-  width: 100%;
-  background-color: rgba(38, 20, 42, 0.5);
-  margin-top: 2em;
-  border-radius: 8px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.wrapper .bttn:hover {
-  background-color: #26142a;
-  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
